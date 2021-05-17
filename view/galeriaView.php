@@ -5,8 +5,8 @@ require_once 'public/header.php';
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Mapa del sitio</h1> 
-    <p>Muestra como es la estructura del sitio con una descripcion de cada nodo y su link.</p>  
+    <h1>Galeria</h1> 
+    <p>Muestra imagenes y la descripción de los atractivos y actividades.</p>   
     </div>
 </div>
 <div class="containerRow">
