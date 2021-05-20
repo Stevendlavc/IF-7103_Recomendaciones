@@ -203,6 +203,11 @@ function check_events(day, month, year) {
     return events;
 }
 
+function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+  }
+
 // Given data for events in JSON format
 var event_data = {
     "events": [
@@ -259,3 +264,4 @@ const months = [
     "Noviembre",
     "Diciembre"
 ];
+
