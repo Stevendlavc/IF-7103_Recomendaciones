@@ -25,13 +25,13 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php">Principal</a></li>
         <li><a href="?controlador=mapa&accion=accionMapa">Mapa del sitio</a></li>
-        <li><a href="#">Actividades</a></li>
+        <li><a href="?controlador=actividades&accion=accionActividades">Actividades</a></li>
         <li><a href="?controlador=atractivos&accion=atractivos">Atractivos</a></li>
-        <li><a href="#">Recomendaciones</a></li>
+        <li><a href="?controlador=recomendaciones&accion=accionFormularioRecomendaciones">Recomendaciones</a></li>
         <li><a href="?controlador=galeria&accion=accionGaleria">Galeria</a></li>
         <li><a href="?controlador=promociones&accion=promociones">Promociones</a></li>
         <li><a href="?controlador=tips&accion=tips">Consejos para viajar</a></li>
-        <li><a href="#">Sobre nosotros</a></li>
+        <li><a href="?controlador=sobreNosotros&accion=accionSobreNosotros">Sobre nosotros</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
