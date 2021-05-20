@@ -8,12 +8,13 @@ require_once 'public/header.php';
         <p class="text-center">Aquí puedes ver las diferentes actividades turísticas y filtrarlas para ver solamente las que desee.</p>
         <br>
         <select class="form-control text-center select-atractivos">
-            <option disabled value="0" selected> - Filtrar por tipo de actividad - </option>
-            <option value="1">En el mar</option>
-            <option value="2">En montaña</option>
-            <option value="3">En la ciudad</option>
+            <option class="option-atractivos" disabled value="0" selected> - Filtrar por tipo de actividad - </option>
+            <option class="option-atractivos" value="1">En el mar</option>
+            <option class="option-atractivos" value="2">En montaña</option>
+            <option class="option-atractivos" value="3">En la ciudad</option>
         </select>
-
+        <br>
+        <br>
         <script>
             $( ".select-atractivos" ).change(function() {
                 if($( ".select-atractivos" ).val() === "1"){

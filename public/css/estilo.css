@@ -1,16 +1,29 @@
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      color: white;     
+        background: #52A0FD;
+        background: -moz-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: -webkit-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: linear-gradient(to right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+    }
+
+    .nav-item a{
+        color: white !important;
+        font-size: 0.8em !important;
+        padding-left: 20px !important;
+    }
+
+    .nav-item a:hover{
+        color: red !important;
     }
 
     body{
         background:url(img/img6.jpg)no-repeat;
         background-size: 100%;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         margin: 0;
         background-color: #f2f2f2;
+        font-size: 1.5em;
     }  
 
     /* Add a gray background color and some padding to the footer */
@@ -42,6 +55,22 @@
 
     .textCarrousel{
         text-align: center;
+        padding-top: 1em;
+    }
+
+    .carousel-indicators{
+        margin-bottom: 3em;
+    }
+
+    .img-crsl{
+        width: 100%;
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
+    }
+
+    .carousel-inner{
+        width: auto;
     }
 
     .rowMapa{
@@ -55,9 +84,13 @@
 
     }
 
+    h1{
+        font-size: 2em !important;
+    }
+
     h3{
         color: #2986BF;
-
+        font-size: 2rem;
     }
 
 
@@ -142,10 +175,10 @@
     }
 
     .panel-tips{
-        margin-top: 2em;
+        padding-top: 1em;
         width: 100%;
-        height: 50em;
-        background: url("../img/img-tips-1.jpg")no-repeat;
+        height: 35em;
+        background-image: url("../img/img-tips-1.jpg");
         background-size: 100%;
     }
 
@@ -163,11 +196,11 @@
     }
 
     .tips{
-        margin-top: 0.5em;
+        margin-top: 1em;
         margin-bottom: 0.5em;
         background-color: white;
-        border-top: 2px;
-        border-bottom: 2px;
+        border-top: 3px;
+        border-bottom: 3px;
         border-top-style: solid;
         border-bottom-style: solid;
 
@@ -176,8 +209,8 @@
     }
 
     .img-tip{
-        max-width: 20em;
-        max-height: 20em;
+        max-width: 15em;
+        max-height: 15em;
         padding-top: 20px;
         padding-bottom: 20px;
         padding-left: 20px;
@@ -193,8 +226,13 @@
         color: floralwhite;
     }
 
+    .texto-tip{
+        font-size: 1.5rem;
+    }
+
     .select-atractivos{
         width: 50%;
+        height: 2em !important;
         display: flex;
         margin: auto;
         background: #52A0FD;
@@ -202,8 +240,13 @@
         background: -webkit-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
         background: linear-gradient(to right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
         color: white;
+        font-size: 1em;
     }
 
+    .option-atractivos{
+        background: #52A0FD !important;
+        color: white;
+    }
 
     .img-atractivo{
         display: block;
@@ -212,13 +255,16 @@
     }
 
     .contenedor-atractivos{
-        display: grid;
+        display: inline-grid;
         grid-column-gap: 10px;
     }
 
-    .option-atractivos{
-        background: #52A0FD !important;
+    .miniatura-atractivo{
+        display: block;
+        text-align: -webkit-center;
     }
+
+
 
 
     /* CSS del calendario */
@@ -419,13 +465,29 @@
         box-shadow: 0 2px 8px RGBA(130, 180, 255, .9);
     }
 
+    @media only screen and (max-width: 1366px){
+        .event-card{
+            width: 400px;
+        }
+
+        .panel-tips{
+            height: 25em;
+        }
+        .texto-panel-tips{
+            margin-top: 1em;
+        }
+    }
+
     @media only screen and (max-width: 962px){
         .event-card{
             width: 400px;
         }
 
         .texto-panel-tips{
-            margin-top: 2em;
+            margin-top: 1em;
+        }
+        .panel-tips{
+            height: 15em;
         }
     }
 
@@ -467,6 +529,9 @@
         .event-card{
             width: 300px;
         }
+        .panel-tips{
+            height: 15em;
+        }
         .texto-panel-tips{
             margin-top: 2em;
         }
@@ -505,6 +570,9 @@
             bottom: 10px;
             right: 10px;
             padding: 0.5rem 1.5rem;
+        }
+        .panel-tips{
+            height: 10em;
         }
         .texto-panel-tips{
             margin-top: 1em;
