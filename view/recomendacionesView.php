@@ -23,7 +23,7 @@ require_once 'public/header.php';
                 <div>
                     <section class="get-in-touch">
                         <div>
-                            <h1 class="title">Criterios de Búsquedad</h1>
+                            <h1 class="title">Criterios de Búsqueda</h1>
                         </div>
 
                         <div class="contenedorFormulario">
@@ -99,8 +99,8 @@ require_once 'public/header.php';
             <div class="row contenedor-atractivos">
                 <!--modal 1-->
                 <div style="grid-column-start: 1; grid-column-end: 1;" class="">
-                    <div>
-                        <h3 class="text-center">Parque Nacional Manuel Antonio</h3>
+                    <div class="miniatura-atractivo">
+                        <h3 class="text-center" style="height: 100px;">Parque Nacional Manuel Antonio</h3>
                         <img type="button" src="public/css/img/atractivo1.jpg" width="400" height="341" data-toggle="modal" data-target=".bd-example-modal-lg">
                     </div>
                     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -158,8 +158,8 @@ require_once 'public/header.php';
                 </div>
                     <!--modal 2 -->
                     <div style="grid-column-start: 2; grid-column-end: 2;" class="" >
-                        <div>
-                            <h3 class="text-center"> Volcán Póas</h3>
+                        <div class="miniatura-atractivo">
+                            <h3 class="text-center" style="height: 100px;"> Volcán Póas</h3>
                             <img type="button" src="public/css/img/volvanPoas2.jpg" width="400" height="341" data-toggle="modal" data-target=".bd-example-modal-2g">
                         </div>
                         <div class="modal fade bd-example-modal-2g" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -217,8 +217,8 @@ require_once 'public/header.php';
 
                     <!--modal 3 -->
                     <div style="grid-column-start: 3; grid-column-end: 3;" class="">
-                        <div>
-                            <h3 class="text-center">Parque Nacional Marino Ballena</h3>
+                        <div class="miniatura-atractivo">
+                            <h3 class="text-center" style="height: 100px;">Parque Nacional Marino Ballena</h3>
                             <img type="button" src="public/css/img/marinoBallena2.jpg" width="400" height="341" data-toggle="modal" data-target=".bd-example-modal-3g">
                         </div>
                         <div class="modal fade bd-example-modal-3g" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -275,8 +275,8 @@ require_once 'public/header.php';
                     </div>
                 <!--modal 4-->
                 <div style="grid-column-start: 1; grid-column-end: 1;" class="">
-                    <div>
-                        <h3 class="text-center">Canopy</h3>
+                    <div class="miniatura-atractivo">
+                        <h3 class="text-center" style="height: 100px;">Canopy</h3>
                         <img type="button" src="public/css/img/canopy.jpg" width="400" height="341" data-toggle="modal" data-target=".bd-example-modal-4g">
                     </div>
                     <div class="modal fade bd-example-modal-4g" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -332,8 +332,8 @@ require_once 'public/header.php';
                 </div>
                 <!--modal 5 -->
                 <div style="grid-column-start: 2; grid-column-end: 2;" class="" >
-                    <div>
-                        <h3 class="text-center">Surfing</h3>
+                    <div class="miniatura-atractivo">
+                        <h3 class="text-center" style="height: 100px;">Surfing</h3>
                         <img type="button" src="public/css/img/surfear.jpg" width="400" height="341" data-toggle="modal" data-target=".bd-example-modal-5g">
                     </div>
                     <div class="modal fade bd-example-modal-5g" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">

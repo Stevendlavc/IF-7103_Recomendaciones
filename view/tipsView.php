@@ -7,7 +7,7 @@ require_once 'public/header.php';
         Consejos para viajeros
     </div>
 </div>
-<div class="container tips">
+<div class="container-fluid tips" style="width: 75%;">
     <div class="row">
         <div class="col-md-4 col-lg-4">
             <img src="./public/img/colon.jpg" class="img-tip">
@@ -26,7 +26,7 @@ require_once 'public/header.php';
         </div>
     </div>
 </div>
-<div class="container tips">
+<div class="container-fluid tips" style="width: 75%;">
     <div class="row">
         <div class="col-md-8 col-lg-8">
             <h2 class="titulo-tip">Tours guiados</h2>
@@ -45,7 +45,7 @@ require_once 'public/header.php';
         </div>
     </div>
 </div>
-<div class="container tips">
+<div class="container-fluid tips" style="width: 75%;">
     <div class="row">
         <div class="col-md-4 col-lg-4">
             <img src="./public/img/tipCuidadoPersonal.jpg" class="img-tip">

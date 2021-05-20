@@ -13,12 +13,14 @@ require_once 'public/header.php';
             <option class="option-atractivos" value="2">Parques Nacionales</option>
             <option class="option-atractivos" value="3">Hoteles</option>
         </select>
+        <br>
+        <br>
         <script>
             $( ".select-atractivos" ).change(function() {
                 if($( ".select-atractivos" ).val() === "1"){
                     $(".contenedor-atractivos").html('<div style="grid-column-start: 1; grid-column-end: 1;" class="" >\n' +
-                        '                <div>\n' +
-                        '                    <h3 class="text-center">Volcán Póas</h3>\n' +
+                        '                <div class="miniatura-atractivo">\n' +
+                        '                    <h3 class="text-center" style="height: 100px">Volcán Poás</h3>\n' +
                         '                    <div class="img-atractivo">\n' +
                         '                        <img type="button" src="public/css/img/volvanPoas2.jpg" style="width: 100%; height: 100%" data-toggle="modal" data-target=".bd-example-modal-2g">\n' +
                         '                    </div>\n' +
@@ -27,7 +29,7 @@ require_once 'public/header.php';
                         '                    <div class="modal-dialog modal-lg">\n' +
                         '                        <div class="modal-content" style="color: white">\n' +
                         '                            <div class="form-field col-lg-12 " id="titulo">\n' +
-                        '                                <h2 style="text-align: center; font-size: 4em">Volcán Póas</h2>\n' +
+                        '                                <h2 style="text-align: center; font-size: 4em">Volcán Poás</h2>\n' +
                         '                            </div>\n' +
                         '                            <div class="form-field col-lg-12 " id="descripcion">\n' +
                         '                                <p style="font-size: 1.5em;">\n' +
@@ -77,8 +79,8 @@ require_once 'public/header.php';
                 }else{
                     if($( ".select-atractivos" ).val() === "2"){
                         $(".contenedor-atractivos").html('<div style="grid-column-start: 1; grid-column-end: 1;" class="">\n' +
-                            '                <div>\n' +
-                            '                    <h3 class="text-center">Parque Nacional Manuel Antonio</h3>\n' +
+                            '                <div class="miniatura-atractivo">\n' +
+                            '                    <h3 class="text-center" style="height: 100px">Parque Nacional Manuel Antonio</h3>\n' +
                             '                    <div class="img-atractivo">\n' +
                             '                        <img type="button" src="public/css/img/atractivo1.jpg" style="width: 100%; height: 100%;" data-toggle="modal" data-target=".bd-example-modal-lg">\n' +
                             '                    </div>\n' +
@@ -139,8 +141,8 @@ require_once 'public/header.php';
                             '                \n' +
                             '\n' +
                             '            <div style="grid-column-start: 2; grid-column-end: 2;" class="">\n' +
-                            '                <div>\n' +
-                            '                    <h3 class="text-center">Parque Nacional Marino Ballena</h3>\n' +
+                            '                <div class="miniatura-atractivo">\n' +
+                            '                    <h3 class="text-center" style="height: 100px">Parque Nacional Marino Ballena</h3>\n' +
                             '                    <div class="img-atractivo">\n' +
                             '                        <img type="button" src="public/css/img/marinoBallena2.jpg" style="width: 100%; height: 100%;" data-toggle="modal" data-target=".bd-example-modal-3g">\n' +
                             '                    </div>\n' +
@@ -206,8 +208,8 @@ require_once 'public/header.php';
         <div class="row contenedor-atractivos">
             <!--modal 1-->
             <div class="" style="grid-column-start: 1;">
-                <div>
-                    <h3 class="text-center">Parque Nacional Manuel Antonio</h3>
+                <div class=" miniatura-atractivo">
+                    <h3 class="text-center" style="height: 100px">Parque Nacional Manuel Antonio</h3>
                     <img type="button" src="public/css/img/atractivo1.jpg" width="400" height="341" data-toggle="modal" data-target=".bd-example-modal-lg">
                 </div>
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -265,15 +267,15 @@ require_once 'public/header.php';
             </div>
             <!--modal 2 -->
             <div class="" style="grid-column-start: 2;">
-                <div>
-                    <h3 class="text-center">Volcán Póas</h3>
+                <div class="miniatura-atractivo">
+                    <h3 class="text-center" style="height: 100px">Volcán Poás</h3>
                     <img type="button" src="public/css/img/volvanPoas2.jpg" width="400" height="341" data-toggle="modal" data-target=".bd-example-modal-2g">
                 </div>
                 <div class="modal fade bd-example-modal-2g" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content" style="color: white">
                             <div class="form-field col-lg-12 " id="titulo">
-                                <h2 style="text-align: center; font-size: 4em">Parque Nacional Manuel Antonio</h2>
+                                <h2 style="text-align: center; font-size: 4em">Volcán Póas</h2>
                             </div>
 
                             <div class="form-field col-lg-12 " id="descripcion">
@@ -324,8 +326,8 @@ require_once 'public/header.php';
 
             <!--modal 3 -->
             <div class="" style="grid-column-start: 3;">
-                <div>
-                    <h3 class="text-center">Parque Nacional Marino Ballena</h3>
+                <div class="miniatura-atractivo">
+                    <h3 class="text-center" style="height: 100px">Parque Nacional Marino Ballena</h3>
                     <img type="button" src="public/css/img/marinoBallena2.jpg" width="400" height="341" data-toggle="modal" data-target=".bd-example-modal-3g">
                 </div>
                 <div class="modal fade bd-example-modal-3g" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">

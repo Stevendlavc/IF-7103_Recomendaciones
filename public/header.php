@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Recomendaciones de actividades y atractivos turísticos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="public/css/estilo.css">
+    <link rel="stylesheet" href="public/css/estilo.css">
 
 </head>
 <body>
 
-<nav>
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Inicio</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?controlador=mapa&accion=accionMapa">Mapa del sitio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?controlador=actividades&accion=accionActividades">Actividades</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?controlador=atractivos&accion=atractivos">Atractivos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?controlador=recomendaciones&accion=accionFormularioRecomendaciones">Recomendaciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?controlador=galeria&accion=accionGaleria">Galeria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?controlador=promociones&accion=promociones">Promociones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?controlador=tips&accion=tips">Consejos para viajar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?controlador=sobreNosotros&accion=accionSobreNosotros">Sobre nosotros</a>
+            </li>
+        </ul>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Principal</a></li>
-        <li><a href="?controlador=mapa&accion=accionMapa">Mapa del sitio</a></li>
-        <li><a href="?controlador=actividades&accion=accionActividades">Actividades</a></li>
-        <li><a href="?controlador=atractivos&accion=atractivos">Atractivos</a></li>
-        <li><a href="?controlador=recomendaciones&accion=accionFormularioRecomendaciones">Recomendaciones</a></li>
-        <li><a href="?controlador=galeria&accion=accionGaleria">Galeria</a></li>
-        <li><a href="?controlador=promociones&accion=promociones">Promociones</a></li>
-        <li><a href="?controlador=tips&accion=tips">Consejos para viajar</a></li>
-        <li><a href="?controlador=sobreNosotros&accion=accionSobreNosotros">Sobre nosotros</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
 </nav>
 

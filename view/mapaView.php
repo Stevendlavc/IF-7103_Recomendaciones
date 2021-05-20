@@ -20,35 +20,35 @@ require_once 'public/header.php';
         	<p>Descripción de la página mapa del sitio</p>
 	  	</div>
 	 	<div class="col-sm-4 text-center">
-	  		<a class="tituloMapa">Actividades</a>
+	  		<a class="tituloMapa" href="?controlador=actividades&accion=accionActividades">Actividades</a>
         	<p>Descripción de la página actividades</p>
 	  	</div>
     </div>
     <div class="row rowMapa">
         <div class="col-sm-4 text-center">
-        	<a class="tituloMapa">Atractivos</a>
+        	<a class="tituloMapa" href="?controlador=atractivos&accion=atractivos">Atractivos</a>
         	<p>Descripción de la página atractivos</p>
         </div>
 	  	<div class="col-sm-4 text-center">
-	  		<a class="tituloMapa">Recomendaciones</a>
+	  		<a class="tituloMapa" href="?controlador=recomendaciones&accion=accionFormularioRecomendaciones">Recomendaciones</a>
         	<p>Descripción de la página recomendaciones</p>
 	  	</div>
 	 	<div class="col-sm-4 text-center">
-	  		<a class="tituloMapa">Galeria</a>
+	  		<a class="tituloMapa" href="?controlador=galeria&accion=accionGaleria">Galeria</a>
         	<p>Descripción de la página galeria</p>
 	  	</div>
     </div>
     <div class="row rowMapa">
         <div class="col-sm-4 text-center">
-        	<a class="tituloMapa">Promociones</a>
+        	<a class="tituloMapa" href="?controlador=promociones&accion=promociones">Promociones</a>
         	<p>Descripción de la página promociones</p>
         </div>
 	  	<div class="col-sm-4 text-center">
-	  		<a class="tituloMapa">Consejos para viajar</a>
+	  		<a class="tituloMapa" href="?controlador=tips&accion=tips">Consejos para viajar</a>
         	<p>Descripción de la página consejos para viajar</p>
 	  	</div>
 	 	<div class="col-sm-4 text-center">
-	  		<a class="tituloMapa">Sobre nosotros</a>
+	  		<a class="tituloMapa" href="?controlador=sobreNosotros&accion=accionSobreNosotros">Sobre nosotros</a>
         	<p>Descripción de la página sobre nosotros</p>
 	  	</div>
     </div>
