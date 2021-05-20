@@ -30,7 +30,7 @@
     footer {
       background-color: #2986BF;
       color: white;
-      padding: 25px;
+      padding: 15px;
     }
 
     .jumbotron{
@@ -102,21 +102,21 @@
 
     #myImg:hover {opacity: 0.7;}
 
-    .modal {
-        display: none; 
-        position: fixed; 
-        z-index: 1; 
-        padding-top: 100px; 
+    .modal-galeria {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
         left: 0;
         top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto; 
-        background-color: rgb(0,0,0); 
-        background-color: rgba(0,0,0,0.9); 
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9);
     }
 
-    .modal-content {
+    .modal-img {
         margin: auto;
         display: block;
         width: 80%;
@@ -134,7 +134,7 @@
         height: 150px;
     }
 
-    .modal-content, #caption { 
+    .modal-img, #caption {
         animation-name: zoom;
         animation-duration: 0.6s;
     }
@@ -162,7 +162,7 @@
     }
 
     @media only screen and (max-width: 700px){
-        .modal-content {
+        .modal-img {
             width: 100%;
         }
     }
@@ -485,6 +485,7 @@
 
         .texto-panel-tips{
             margin-top: 1em;
+            font-size: 2em;
         }
         .panel-tips{
             height: 15em;
@@ -581,10 +582,77 @@
 
     .modalVideo{
         margin-top: 20px;
-
+        width: 400px;
+        height: 300px;
     }
 
     .modalMapa{
         margin-top: 20px;
+        width: 400px;
+        height: 300px;
     }
 
+    .modalImagen{
+        margin-top: 20px;
+        width: 400px;
+        height: 300px;
+    }
+
+.modal-content{
+    background: transparent;
+}
+
+    @media only screen and (max-width: 1366px){
+        .columnsGrid{
+            font-size: 0.5em;
+        }
+        .img-atractivo{
+            width: 300px;
+            height: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 992px){
+        .columnsGrid{
+            grid-column-start: 1!important;
+            grid-column-end: 1 !important;
+            font-size: 0.5em;
+        }
+        .img-atractivo{
+            width: 300px;
+            height: 200px;
+        }
+
+        .modalVideo{
+            width: 300px;
+            height: 200px;
+        }
+
+        .modalMapa{
+            width: 300px;
+            height: 200px;
+        }
+
+        .modalImagen{
+            margin-top: 20px;
+            width: 300px;
+            height: 200px;
+        }
+
+        .texto-panel-tips{
+            font-size: 2em;
+        }
+    }
+
+    @media only screen and (max-width: 780px) {
+        .columnsGrid{
+            grid-column-start: 1!important;
+            grid-column-end: 1 !important;
+            font-size: 0.5em;
+        }
+
+        .img-atractivo{
+            width: 300px;
+            height: 200px;
+        }
+    }
