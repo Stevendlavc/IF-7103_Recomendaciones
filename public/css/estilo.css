@@ -60,6 +60,7 @@
 
     }
 
+
     #myImg {
     border-radius: 5px;
     cursor: pointer;
@@ -133,4 +134,389 @@
         }
     }
        
+
+    .containerPromos{
+        width: 100%;
+        background-color: white;
+        margin-top: 50px;
+    }
+
+    .panel-tips{
+        margin-top: 2em;
+        width: 100%;
+        height: 50em;
+        background: url("../img/img-tips-1.jpg")no-repeat;
+        background-size: 100%;
+    }
+
+    .texto-panel-tips{
+        background: #52A0FD;
+        background: -moz-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: -webkit-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: linear-gradient(to right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        width: 10em;
+        font-size: 4em;
+        margin-top: 5em;
+        color: floralwhite;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .tips{
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        background-color: white;
+        border-top: 2px;
+        border-bottom: 2px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+
+
+        border-color: #52A0FD;
+    }
+
+    .img-tip{
+        max-width: 20em;
+        max-height: 20em;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+
+    .titulo-tip{
+        background: #52A0FD;
+        background: -moz-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: -webkit-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: linear-gradient(to right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        font-size: 2em;
+        margin-top: 20px;
+        color: floralwhite;
+    }
+
+    .select-atractivos{
+        width: 50%;
+        display: flex;
+        margin: auto;
+        background: #52A0FD;
+        background: -moz-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: -webkit-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: linear-gradient(to right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        color: white;
+    }
+
+
+    .img-atractivo{
+        display: block;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .contenedor-atractivos{
+        display: grid;
+        grid-column-gap: 10px;
+    }
+
+    .option-atractivos{
+        background: #52A0FD !important;
+    }
+
+
+    /* CSS del calendario */
+    .content {
+        max-width: 1024px;
+        padding: 0px 0;
+        height: 500px;
+        position: relative;
+        margin: 20px auto;
+        background: #52A0FD;
+        background: -moz-linear-gradient(right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: -webkit-linear-gradient(right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: linear-gradient(to left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        border-radius: 3px;
+        box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        -moz-box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        -webkit-box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    /*  Events display */
+    .events-container {
+        overflow-y: scroll;
+        height: 100%;
+        float: right;
+        margin: 0px auto;
+        font: 15px Helvetica, Arial, sans-serif;
+        display: inline-block;
+        padding: 0 10px;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    .events-container:after{
+        clear:both;
+    }
+    .event-card {
+        padding: 20px 0;
+        width: 600px;
+        margin: 20px auto;
+        display: block;
+        background: #fff;
+        border-left: 10px solid #52A0FD;
+        border-radius: 3px;
+        box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        -moz-box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        -webkit-box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .event-count, .event-name, .event-cancelled {
+        display: inline;
+        padding: 0 10px;
+        font-size: 1em;
+    }
+    .event-count {
+        color: #52A0FD;
+        text-align: right;
+    }
+    .event-name {
+        padding-right:0;
+        text-align: left;
+    }
+    .event-cancelled {
+        color: #FF1744;
+        text-align: right;
+    }
+
+    /*  Calendar wrapper */
+    .calendar-container  {
+        float: left;
+        position: relative;
+        margin: 0px auto;
+        height: 100%;
+        background: #fff;
+        font: 13px Helvetica, Arial, san-serif;
+        display: inline-block;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+    .calendar-container:after{
+        clear:both;
+    }
+    .calendar {
+        display: table;
+    }
+
+    /* Calendar Header */
+    .year-header {
+        background: #52A0FD;
+        background: -moz-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: -webkit-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        background: linear-gradient(to right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        font-family: Helvetica;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        height: 40px;
+        text-align: center;
+        position: relative;
+        color:#fff;
+        border-top-left-radius: 3px;
+    }
+    .year-header span {
+        display:inline-block;
+        font-size: 20px;
+        line-height:40px;
+    }
+    .left-button, .right-button {
+        cursor: pointer;
+        width:28px;
+        text-align:center;
+        position:absolute;
+    }
+    .left-button {
+        left:0;
+        -webkit-border-top-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        border-top-left-radius: 5px;
+    }
+    .right-button {
+        right:0;
+        top:0;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-right-radius: 5px;
+    }
+    .left-button:hover {
+        background: #3FADFF;
+    }
+    .right-button:hover {
+        background: #00C1FF;
+    }
+
+    /* Days/months tables */
+    .days-table, .dates-table, .months-table {
+        border-collapse:separate;
+        text-align: center;
+    }
+    .day {
+        height: 26px;
+        width: 26px;
+        padding: 0 10px;
+        line-height: 26px;
+        border: 2px solid transparent;
+        text-transform:uppercase;
+        font-size:90%;
+        color:#9e9e9e;
+    }
+    .month {
+        cursor: default;
+        height: 26px;
+        width: 26px;
+        padding: 0 2px;
+        padding-top:10px;
+        line-height: 26px;
+        text-transform:uppercase;
+        font-size: 11px;
+        color:#9e9e9e;
+        transition: all 250ms;
+    }
+    .active-month {
+        font-weight: bold;
+        font-size: 14px;
+        color: #FF1744;
+        text-shadow: 0 1px 4px RGBA(255, 50, 120, .8);
+    }
+    .month:hover {
+        color: #FF1744;
+        text-shadow: 0 1px 4px RGBA(255, 50, 120, .8);
+    }
+
+    /*  Dates table */
+    .table-date {
+        cursor: default;
+        color:#2b2b2b;
+        height:26px;
+        width: 26px;
+        font-size: 15px;
+        padding: 0.93em;
+        line-height:26px;
+        text-align:center;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: all 250ms;
+    }
+    .table-date:not(.nil):hover {
+        border-color: #FF1744;
+        box-shadow: 0 2px 6px RGBA(255, 50, 120, .9);
+    }
+    .event-date {
+        border-color:#52A0FD;
+        box-shadow: 0 2px 8px RGBA(130, 180, 255, .9);
+    }
+    .active-date{
+        background: #FF1744;
+        box-shadow: 0 2px 8px RGBA(255, 50, 120, .9);
+        color: #fff;
+    }
+    .event-date.active-date {
+        background: #52A0FD;
+        box-shadow: 0 2px 8px RGBA(130, 180, 255, .9);
+    }
+
+    @media only screen and (max-width: 962px){
+        .event-card{
+            width: 400px;
+        }
+
+        .texto-panel-tips{
+            margin-top: 2em;
+        }
+    }
+
+    /* Tablets and smaller */
+    @media only screen and (max-width: 780px) {
+        .content {
+            overflow: visible;
+            position:relative;
+            max-width: 100%;
+            width: 370px;
+            height: 100%;
+            background: #52A0FD;
+            background: -moz-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+            background: -webkit-linear-gradient(left,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+            background: linear-gradient(to right,  #52A0FD 0%, #00C9FB 80%, #00C9FB 100%);
+        }
+        .events-container {
+            float:none;
+            overflow: visible;
+            margin: 0 auto;
+            padding: 0;
+            display: block;
+            left: 0;
+            border-radius: 3px;
+        }
+
+        .calendar-container {
+            float: none;
+            padding: 0;
+            margin: 0 auto;
+            margin-right: 0;
+            display: block;
+            left: 0;
+            border-radius: 3px;
+            box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            -moz-box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            -webkit-box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+        .event-card{
+            width: 300px;
+        }
+        .texto-panel-tips{
+            margin-top: 2em;
+        }
+    }
+
+    /* Small phone screens */
+    @media only screen and (max-width: 400px) {
+        .content, .events-container, .year-header, .calendar-container {
+            width: 320px;
+        }
+        .months-table {
+            display: block;
+            margin: 0 auto;
+            width: 320px;
+        }
+        .event-card {
+            width: 300px;
+        }
+        .day {
+            padding: 0 7px;
+        }
+        .month {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: .8rem;
+        }
+        .table-date {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .event-name, .event-count, .event-cancelled {
+            font-size: .8rem;
+        }
+        .add-button{
+            bottom: 10px;
+            right: 10px;
+            padding: 0.5rem 1.5rem;
+        }
+        .texto-panel-tips{
+            margin-top: 1em;
+        }
+    }
+
+    .modalVideo{
+        margin-top: 20px;
+
+    }
+
+    .modalMapa{
+        margin-top: 20px;
+    }
 
