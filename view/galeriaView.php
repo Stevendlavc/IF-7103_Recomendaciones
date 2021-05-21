@@ -1,7 +1,7 @@
 <?php
 require_once 'public/header.php';
 ?>
-
+<div class="contenedorBody">
     <div class="jumbotron">
       <div class="container">
         <h1>Galeria</h1>
@@ -92,7 +92,7 @@ require_once 'public/header.php';
         <img id="img01" style="max-width:100%">
       </div>
     </div>
-
+</div>
 
 <?php
 require_once 'public/footer.php';

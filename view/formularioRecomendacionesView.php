@@ -4,6 +4,7 @@ require_once 'public/header.php';
 <link rel="stylesheet" type="text/css" href="public/css/PanelDesplegables.css">
 <script type="text/javascript" src="public/js/recomendaciones.js"></script>
 
+<div class="contenedorBody"
 <div>
     <div class="jumbotron">
         <div class="container">
@@ -42,6 +43,7 @@ require_once 'public/header.php';
                             <option value="1" selected>Exploradores </option>
                             <option value="2">Extremos</option>
                             <option value="3">Tranquilos</option>
+                            <option value="4">Aventureros</option>
                         </select>
                         <label class="label" for="turista">Tipo Turista</label>
                     </div>
@@ -52,7 +54,7 @@ require_once 'public/header.php';
                             <option value="2">Surf</option>
                             <option value="3">Canopy</option>
                         </select>
-                        <label class="label" for="tipoActividad">Tipo de Actividad</label>
+                        <label class="label" for="tipoActividad">Tipo Actividad</label>
                     </div>
 
                     <div class="form-field col-lg-12 " id="divAtractivo" name="divAtractivo" hidden>
@@ -62,7 +64,7 @@ require_once 'public/header.php';
                             <option value="3">Ciudad</option>
                             <option value="4">Parques Nacionales</option>
                         </select>
-                        <label class="label" for="tipoAtractivo">Tipo de Atractivo</label>
+                        <label class="label" for="tipoAtractivo">Tipo Atractivo</label>
                     </div>
 
                     <div class="form-field col-lg-12 ">

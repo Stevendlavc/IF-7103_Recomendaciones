@@ -2,7 +2,7 @@
 require_once 'public/header.php';
 ?>
 
-<div>
+<div class="contenedorBody">
     <div class="container-fluid panel-tips">
         <div class="texto-panel-tips">
             Consejos para viajeros

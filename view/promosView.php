@@ -1,7 +1,7 @@
 <?php
 require_once 'public/header.php';
 ?>
-<div class="containerPromos text-center">
+<div class="containerPromos text-center contenedorBody">
     <h2 style="padding-top: 1em;">Eventos y promociones especiales</h2>
 <br>
 <div class="content">

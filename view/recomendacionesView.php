@@ -7,6 +7,7 @@ require_once 'public/header.php';
 
 </html>
 
+<div class="contenedorBody">
     <div class="jumbotron">
         <div class="container">
             <h1 align="center">Recomendaciones</h1>
@@ -48,8 +49,9 @@ require_once 'public/header.php';
                                 <div class="form-field">
                                     <select class="form-select input-text js-input" name="turista" id="turista">
                                         <option value="1" selected>Exploradores </option>
-                                        <option value="2">Otro nose</option>
-                                        <option value="3">Otro que tamooco se</option>
+                                        <option value="2">Extremos</option>
+                                        <option value="3">Tranquilos</option>
+                                        <option value="4">Aventureros</option>
                                     </select>
                                     <label class="label" for="turista">Tipo Turista</label>
                                 </div>
@@ -58,7 +60,7 @@ require_once 'public/header.php';
                                     <select class="form-select input-text js-input" name="tipoActividad" id="tipoActividad">
                                         <option value="1" selected>Senderos</option>
                                         <option value="2">Surf</option>
-                                        <option value="3">Otra..</option>
+                                        <option value="3">En rios</option>
                                     </select>
                                     <label class="label" for="tipoActividad">Tipo de Actividad</label>
                                 </div>
@@ -414,6 +416,7 @@ require_once 'public/header.php';
             </div>
         </div>
     </div>
+</div>
 <?php
 require_once 'public/footer.php';
 ?>

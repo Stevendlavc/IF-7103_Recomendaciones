@@ -2,7 +2,7 @@
 require_once 'public/header.php';
 ?>
 
-<div class="containerRow">
+<div class="containerRow contenedorBody">
     <div class="container">
         <h3 class="text-center">Atractivos</h3>
         <p class="text-center">Aquí puedes ver los diferentes atractivos turísticos y filtrarlos para ver solamente los que desee.</p>
