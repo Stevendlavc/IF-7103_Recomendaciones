@@ -46,6 +46,7 @@
 
 }
 
+
 .get-in-touch {
     max-width: 700px;
     background-color: white;
@@ -114,7 +115,22 @@
     font-size: 16px;
     padding: 8px 16px;
     border: none;
-    width: 325px;
+    width: 350px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.submit-btn-minimo{
+    display: inline-block;
+    background-color: #000;
+    background-image: linear-gradient(125deg,#a72879,#064497);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 150px;
     cursor: pointer;
     border-radius: 20px;
 }
@@ -123,4 +139,132 @@
     background-color: white;
     margin: 40px auto;
     margin-top: 5px;
+
+
+    border-top: 3px;
+    border-bottom: 3px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #52A0FD;
 }
+
+
+@media only screen and (max-width: 1366px){
+    .form-field{
+        margin: 5px 0;
+        font-size: 0.5em;
+    }
+
+    .cambiar{
+        font-size: 1.05em !important;
+        margin: 1px;
+        margin-top: 0px;
+
+        padding: 0px;
+        letter-spacing: 1px;
+        line-height: 10px;
+        padding-bottom: 0px;
+    }
+
+    .cambiaFormulario{
+        margin: 4px auto;
+        margin-top: 1px;
+        border-top: 1px;
+        border-bottom: 1px;
+    }
+
+    .menu {
+        width: 3rem;
+        height: 4rem;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .form-field{
+        margin: 5px 0;
+        font-size: 0.5em;
+    }
+
+    .cambiar{
+        font-size: 1.05em !important;
+        margin: 1px;
+        margin-top: 0px;
+
+        padding: 0px;
+        letter-spacing: 1px;
+        line-height: 10px;
+        padding-bottom: 0px;
+    }
+
+    .cambiarGetInTouch{
+        max-width: 200px;
+        background-color: white;
+        margin: 20px auto;
+        border-radius: 10px;
+
+        padding: 10px;
+        letter-spacing: 1px;
+        font-size: 0.5em;
+        line-height: 20px;
+        padding-bottom: 5px;
+    }
+
+    .cambiaFormulario{
+        margin: 6px auto;
+        margin-top: 2px;
+        border-top: 2px;
+        border-bottom: 2px;
+    }
+
+    .menu {
+        width: 3rem;
+        height: 4rem;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .form-field{
+        margin: 5px 0;
+        font-size: 0.5em;
+    }
+
+    .cambiar{
+        font-size: 1.05em !important;
+        margin: 1px;
+        margin-top: 0px;
+
+        padding: 0px;
+        letter-spacing: 1px;
+        line-height: 10px;
+        padding-bottom: 0px;
+    }
+
+    .cambiarGetInTouch{
+        max-width: 170px;
+        background-color: white;
+        margin: 20px auto;
+        border-radius: 10px;
+
+        padding: 10px;
+        letter-spacing: 1px;
+        font-size: 0.5em;
+        line-height: 20px;
+        padding-bottom: 5px;
+    }
+
+    .cambiaFormulario{
+        margin: 4px auto;
+        margin-top: 1px;
+        border-top: 1px;
+        border-bottom: 1px;
+    }
+
+    .menu {
+        width: 3rem;
+        height: 4rem;
+        font-size: 2rem;
+    }
+}
+

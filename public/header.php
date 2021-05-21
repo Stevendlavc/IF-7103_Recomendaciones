@@ -48,4 +48,20 @@
         </ul>
     </div>
 </nav>
+<iframe src="public/musica/aves_16.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>
+<audio autoplay loop  id="playAudio">
+    <source src="public/musica/aves_16.mp3">
+</audio>
+
+<script>
+    $var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (!isChrome){
+        $('#iframeAudio').remove()
+    }
+    else {
+        $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background
+    }
+</script>
+
 
