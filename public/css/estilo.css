@@ -601,6 +601,10 @@
 .modal-content{
     background: transparent;
 }
+    .img-sobreNosotros{
+        width: 200px;
+        height: 200px;
+    }
 
     @media only screen and (max-width: 1366px){
         .columnsGrid{
@@ -655,4 +659,12 @@
             width: 300px;
             height: 200px;
         }
+        .img-sobreNosotros{
+            width: 100px;
+            height: 100px;
+        }
     }
+
+.contenedorBody{
+    min-height: calc(100vh - 150px - 100px);
+}

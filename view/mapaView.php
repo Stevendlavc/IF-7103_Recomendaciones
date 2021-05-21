@@ -1,7 +1,7 @@
 <?php
 require_once 'public/header.php';
 ?>
-
+<div class="contenedorBody">
     <div class="jumbotron">
       <div class="container">
         <h1>Mapa del sitio</h1>
@@ -52,6 +52,7 @@ require_once 'public/header.php';
             </div>
         </div>
     </div>
+</div>
 <?php
 require_once 'public/footer.php';
 ?>
