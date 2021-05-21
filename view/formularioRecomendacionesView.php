@@ -4,13 +4,14 @@ require_once 'public/header.php';
 <link rel="stylesheet" type="text/css" href="public/css/PanelDesplegables.css">
 <script type="text/javascript" src="public/js/recomendaciones.js"></script>
 
+<div>
     <div class="jumbotron">
         <div class="container">
             <h1 align="center">Recomendaciones</h1>
         </div>
     </div>
 
-    <div>
+    <div class="container-fluid">
         <section class="get-in-touch">
         <div>
                 <h1 class="title">Criterios de Búsqueda</h1>
@@ -18,11 +19,11 @@ require_once 'public/header.php';
 
         <div class="contenedorFormulario">
                 <form class="contact-form row" method="post" action="?controlador=recomendaciones&accion=accionRecomendaciones">
-                    <div class="form-field col-lg-6">
+                    <div class="form-field col-sm-6">
                         <input type="radio" value="none" id="actividad" name="tipo" onclick="activarActividad()" checked/>
                         <label for="actividad" class="label">Actividad</label>
                     </div>
-                    <div class="form-field col-lg-6">
+                    <div class="form-field col-sm-6">
                         <input type="radio" value="none" id="atractivo" name="tipo" onclick="activarAtractivo()"/>
                         <label for="atractivo" class="label">Atractivo</label>
                     </div>
@@ -80,9 +81,10 @@ require_once 'public/header.php';
                         <input class="submit-btn" type="submit" value="Buscar Recomendaciones">
                     </div>
                 </form>
-    </div>
+            </div>
         </section>
     </div>
+</div>
 <?php
 require_once 'public/footer.php';
 ?>

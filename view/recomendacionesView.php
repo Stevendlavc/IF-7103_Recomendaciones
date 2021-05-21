@@ -20,23 +20,23 @@ require_once 'public/header.php';
             <label class="menu" for="check">|||</label>
             <div class="left-panel">
                 <div>
-                    <section class="get-in-touch">
+                    <section class="get-in-touch cambiarGetInTouch">
                         <div>
-                            <h1 class="title">Criterios de Búsqueda</h1>
+                            <h1 class="title cambiar">Criterios de Búsqueda</h1>
                         </div>
 
-                        <div class="contenedorFormulario">
-                            <form class="contact-form row" method="post" action="?controlador=recomendaciones&accion=accionRecomendaciones">
-                                <div class="form-field col-lg-6">
+                        <div class="contenedorFormulario cambiaFormulario">
+                            <form class="contact-form" method="post" action="?controlador=recomendaciones&accion=accionRecomendaciones">
+                                <div class="form-field">
                                     <input type="radio" value="none" id="actividad" name="tipo" onclick="activarActividad()" checked/>
                                     <label for="actividad" class="label">Actividad</label>
                                 </div>
-                                <div class="form-field col-lg-6">
+                                <div class="form-field">
                                     <input type="radio" value="none" id="atractivo" name="tipo" onclick="activarAtractivo()"/>
                                     <label for="atractivo" class="label">Atractivo</label>
                                 </div>
 
-                                <div class="form-field col-lg-12 ">
+                                <div class="form-field ">
                                     <select class="form-select input-text js-input" name="precio" id="precio">
                                         <option value="1" selected>Bajo</option>
                                         <option value="2">Medio</option>
@@ -45,7 +45,7 @@ require_once 'public/header.php';
                                     <label class="label" for="precio">Precio</label>
                                 </div>
 
-                                <div class="form-field col-lg-12 ">
+                                <div class="form-field">
                                     <select class="form-select input-text js-input" name="turista" id="turista">
                                         <option value="1" selected>Exploradores </option>
                                         <option value="2">Otro nose</option>
@@ -54,7 +54,7 @@ require_once 'public/header.php';
                                     <label class="label" for="turista">Tipo Turista</label>
                                 </div>
 
-                                <div class="form-field col-lg-12 " id="divActividad" name="divActividad">
+                                <div class="form-field " id="divActividad" name="divActividad">
                                     <select class="form-select input-text js-input" name="tipoActividad" id="tipoActividad">
                                         <option value="1" selected>Senderos</option>
                                         <option value="2">Surf</option>
@@ -63,7 +63,7 @@ require_once 'public/header.php';
                                     <label class="label" for="tipoActividad">Tipo de Actividad</label>
                                 </div>
 
-                                <div class="form-field col-lg-12 " id="divAtractivo" name="divAtractivo" hidden>
+                                <div class="form-field " id="divAtractivo" name="divAtractivo" hidden>
                                     <select class="form-select input-text js-input" name="tipoActractivo" id="tipoAtractivo">
                                         <option value="1" selected>Playa</option>
                                         <option value="2">Montaña</option>
@@ -73,7 +73,7 @@ require_once 'public/header.php';
                                     <label class="label" for="tipoAtractivo">Tipo de Atractivo</label>
                                 </div>
 
-                                <div class="form-field col-lg-12 ">
+                                <div class="form-field">
                                     <select class="form-select input-text js-input" name="provincia" id="provincia">
                                         <option value="1" selected>San Jose</option>
                                         <option value="2">Alajuela</option>
@@ -85,8 +85,8 @@ require_once 'public/header.php';
                                     </select>
                                     <label class="label" for="provincia">Provincia</label>
                                 </div>
-                                <div class="form-field col-lg-12">
-                                    <input class="submit-btn" type="submit" value="Buscar Recomendaciones">
+                                <div class="form-field">
+                                    <input class="submit-btn-minimo" type="submit" value="Buscar">
                                 </div>
                             </form>
                         </div>
