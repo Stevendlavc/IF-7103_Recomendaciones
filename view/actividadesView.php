@@ -390,7 +390,7 @@ require_once 'public/header.php';
             });
         </script>
 
-        <div class="contenedor-atractivos">
+        <div class="contenedor-atractivos" style="margin-bottom: 15px">
                 <!--modal 1-->
                 <div style="grid-column-start: 1; grid-column-end: 1;" class="columnsGrid">
                     <div class="miniatura-atractivo">

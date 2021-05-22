@@ -388,7 +388,7 @@ require_once 'public/header.php';
                 }
             });
         </script>
-        <div class="contenedor-atractivos">
+        <div class="contenedor-atractivos" style="margin-bottom: 15px">
             <!--modal 1-->
             <div class="columnsGrid" style="grid-column-start: 1;">
                 <div class=" miniatura-atractivo">
