@@ -1,6 +1,7 @@
 <?php
 require_once 'public/header.php';
 ?>
+
 <div class="contenedorBody">
     <div class="jumbotron">
       <div class="container text-center">
@@ -53,7 +54,13 @@ require_once 'public/header.php';
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-                <p style="margin-top: 110px;" class="text-center">Los visitantes disfrutarán de hermosas playas tropicales, emocionantes aventuras, maravillas de la naturaleza y una interesante cultura, todos los componentes necesarios para unas vacaciones ideales.</p>
+                <p style="margin-top: 45px;" class="text-center">Los visitantes disfrutarán de hermosas playas tropicales, emocionantes aventuras, maravillas de la naturaleza y una interesante cultura, todos los componentes necesarios para unas vacaciones ideales.</p>
+                <p style="margin-top: 40px;" class="text-center">Aquí te daremos algunas recomendaciones de actividades o atractivos turísticos que puedes visitar de acuerdo a tus criterios de búsqueda. Solo dale en el siguiente botón y completa los datos.</p>
+                <div class="text-center">
+                    <a style="margin-top: 5px;" href="?controlador=recomendaciones&accion=accionRecomendaciones">
+                        <input class="submit-btn btn-inicio" type="button" value="Recomendaciones">
+                    </a>
+                </div>
             </div>
         </div>
     </div>

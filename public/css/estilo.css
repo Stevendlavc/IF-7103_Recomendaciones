@@ -15,7 +15,7 @@
     }
 
     .nav-item a:hover{
-        color: #074367 !important;
+        color: #FF1744 !important;
     }
 
     body{
@@ -619,6 +619,20 @@
         width: 200px;
       height: 200px;
   }
+    .btn-inicio{
+        display: inline-block;
+        background-color: #000;
+        background-image: linear-gradient(125deg,#a72879,#064497);
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 16px;
+        padding: 8px 16px;
+        border: none;
+        width: 350px;
+        cursor: pointer;
+        border-radius: 20px;
+    }
 
     @media only screen and (max-width: 1366px){
         .columnsGrid{
@@ -686,7 +700,6 @@
             width: 100px;
             height: 100px;
         }
-    }
 
         #myImg{
             width: 200px; 
@@ -695,6 +708,10 @@
         .img-tip{
             max-width: 9em;
             padding-left: 0px;
+        }
+        .btn-inicio{
+            font-size: 13px;
+            width: 200px;
         }
     }
 
@@ -710,6 +727,7 @@
         }
     }
         
-.contenedorBody{
-    min-height: calc(100vh - 150px - 100px);
-}
+    .contenedorBody{
+        min-height: calc(100vh - 150px - 100px);
+    }
+
