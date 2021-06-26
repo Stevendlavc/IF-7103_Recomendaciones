@@ -10,7 +10,7 @@ require_once 'public/header.php';
 <div class="contenedorBody">
     <div class="jumbotron">
         <div class="container">
-            <h1 align="center">Recomendaciones</h1>
+            <h1 align="center"><?php echo $vars['msj'][1][0][1]?></h1>
         </div>
     </div>
 
@@ -27,21 +27,21 @@ require_once 'public/header.php';
                         </div>
 
                         <div class="contenedorFormulario cambiaFormulario">
-                            <form class="contact-form" method="post" action="?controlador=recomendaciones&accion=accionRecomendaciones">
+                            <form class="contact-form" method="post" action="?controlador=recomendaciones&accion=buscarRecomendaciones">
                                 <div class="form-field">
-                                    <input type="radio" value="none" id="actividad" name="tipo" onclick="activarActividad()" checked/>
+                                    <input type="radio" value="1" id="tipo" name="tipo" onclick="activarActividad()" checked/>
                                     <label for="actividad" class="label">Actividad</label>
                                 </div>
                                 <div class="form-field">
-                                    <input type="radio" value="none" id="atractivo" name="tipo" onclick="activarAtractivo()"/>
+                                    <input type="radio" value="2" id="tipo" name="tipo" onclick="activarAtractivo()"/>
                                     <label for="atractivo" class="label">Atractivo</label>
                                 </div>
 
-                                <div class="form-field ">
+                                <div class="form-field col-lg-12 ">
                                     <select class="form-select input-text js-input" name="precio" id="precio">
-                                        <option value="1" selected>Bajo</option>
-                                        <option value="2">Medio</option>
-                                        <option value="3">Alto</option>
+                                        <option value="1" selected>Menor o igual a 10.000</option>
+                                        <option value="2">Mayor a 10.000 y menor o igual a 50.000</option>
+                                        <option value="3">Mayor a 50.000</option>
                                     </select>
                                     <label class="label" for="precio">Precio</label>
                                 </div>
@@ -58,19 +58,19 @@ require_once 'public/header.php';
 
                                 <div class="form-field " id="divActividad" name="divActividad">
                                     <select class="form-select input-text js-input" name="tipoActividad" id="tipoActividad">
-                                        <option value="1" selected>Senderos</option>
-                                        <option value="2">Surf</option>
-                                        <option value="3">En rios</option>
+                                        <option value="6" selected>En la montaña</option>
+                                        <option value="7">En el mar</option>
                                     </select>
-                                    <label class="label" for="tipoActividad">Tipo de Actividad</label>
+                                    <label class="label" for="tipoActividad">Lugar de Actividad</label>
                                 </div>
 
                                 <div class="form-field " id="divAtractivo" name="divAtractivo" hidden>
                                     <select class="form-select input-text js-input" name="tipoActractivo" id="tipoAtractivo">
-                                        <option value="1" selected>Playa</option>
-                                        <option value="2">Montaña</option>
-                                        <option value="3">Ciudad</option>
-                                        <option value="4">Parques Nacionales</option>
+                                        <option value="1" selected>Parques Nacionales</option>
+                                        <option value="2">Volcán</option>
+                                        <option value="3">Museo</option>
+                                        <option value="4">Reserva</option>
+                                        <option value="5">Playa</option>
                                     </select>
                                     <label class="label" for="tipoAtractivo">Tipo de Atractivo</label>
                                 </div>
@@ -98,53 +98,54 @@ require_once 'public/header.php';
         </div>
         <div class="container">
             <div class="row contenedor-atractivos">
-                <!--modal 1-->
-                <div style="grid-column-start: 1; grid-column-end: 1;" class="columnsGrid">
+                <!--modal 1 -->
+
+              <?php $i= 1; $contador = 1;foreach ($vars['datos'] as $dato){ ?>
+                <div style="grid-column-start: <?php echo $i?>; grid-column-end: <?php echo $i?>;" class="columnsGrid">
                     <div class="miniatura-atractivo">
-                        <h3 class="text-center" style="height: 100px;">Parque Nacional Manuel Antonio</h3>
-                        <img style="margin-bottom: 30px" type="button" src="public/css/img/atractivo1.jpg" width="100%" height="100%" data-toggle="modal" data-target=".bd-example-modal-lg">
+                        <h3 class="text-center" style="height: 100px;"><?php echo $dato[0]?></h3>
+                        <img style="margin-bottom: 30px" type="button" src="public/img/<?php echo $dato[1]?>" width="100%" height="100%" data-toggle="modal" onclick="cargarModal(<?php echo $dato[2]?>)" data-target=".bd-example-modal-lg">
+                        <input id="<?php echo $contador?>" type="text" value="<?php echo $dato[2]?>" hidden/>
                     </div>
                     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content" style="color: white">
-                                <div class="form-field" id="titulo">
-                                    <h2 style="text-align: center; font-size: 4em">Parque Nacional Manuel Antonio</h2>
+                                <div class="form-field">
+                                    <h2 id="titulo" style="text-align: center; font-size: 4em"></h2>
                                 </div>
 
-                                <div class="form-field" id="descripcion">
+                                <div class="form-field">
                                     <p style="font-size: 1.5em;">
-                                    <span>
-                                        El Parque Nacional Manuel Antonio en la costa del Pacífico de Costa Rica es uno de los puntos más visitados del país en casi todos los viajes. La foto de las dos playas: Playa Manuel Antonio y Playa Espadilla es quizá una de las fotos más usadas de Costa Rica.
-                                            <br>
-                                        La ciudad del mismo nombre probablemente es hoy uno de los centros turísticos más importantes, debido a la relativamente corta distancia desde San José.
-                                    </span>
+                    <span id="descripcion">
+                        <!-- descripciondentro del span -->
+                    </span>
                                     </p>
                                 </div>
 
-                                <div class="form-field" style="margin-top: 10px" id="precio">
+                                <div class="form-field" style="margin-top: 10px">
                                     <p style="font-size: 1.7em;">
-                                    <span>
-                                        Precio:
-                                     </span>
-                                        <span>
-                                        2000 colones
-                                     </span>
+                    <span>
+                        Precio:
+                    </span>
+                                        <span id="costo">
+
+                    </span>
                                     </p>
                                 </div>
 
                                 <div class="row">
-                                    <div class="form-field col-sm-6 modalImagen" id="imagen1">
-                                        <img src="public/css/img/atractivo1.jpg" width="100%" height="100%">
+                                    <div class="form-field col-sm-6 modalImagen">
+                                        <img id="imagen1" src="public/css/img/atractivo1.jpg" width="100%" height="100%">
                                     </div>
 
-                                    <div class="form-field col-sm-6 modalImagen" id="imagen2">
-                                        <img src="public/css/img/atractivo2.jpg" width="100%" height="100%">
+                                    <div class="form-field col-sm-6 modalImagen" >
+                                        <img id="imagen2" src="public/css/img/atractivo2.jpg" width="100%" height="100%">
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="form-field col-sm-6 modalVideo" id="video">
-                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wvACn9Ysghk"
+                                    <div class="form-field col-sm-6 modalVideo">
+                                        <iframe id="video" width="100%" height="100%" src="https://www.youtube.com/embed/wvACn9Ysghk"
                                                 title="YouTube video player" frameborder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowfullscreen>
@@ -152,8 +153,8 @@ require_once 'public/header.php';
                                         </iframe>
                                     </div>
 
-                                    <div class="form-field col-sm-6 modalMapa" id="mapa">
-                                        <iframe align="left" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17673.703985794513!2d-84.14256240887782!3d9.388858342236096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95e66139ce5c4a86!2sParque%20Nacional%20Manuel%20Antonio!5e0!3m2!1sen!2scr!4v1621396490519!5m2!1sen!2scr"
+                                    <div class="form-field col-sm-6 modalMapa" >
+                                        <iframe id="mapa" align="left" src=""
                                                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                     </div>
                                 </div>
@@ -162,8 +163,17 @@ require_once 'public/header.php';
                     </div>
                 </div>
 
+                <?php if($i < 3){
+                        $i++;
+                    }else{
+                        $i=1;
+                    }
+                  $contador++;
+                }
+                ?>
+
                 <!--modal 2 -->
-                <div style="grid-column-start: 2; grid-column-end: 2;" class="columnsGrid" >
+                <!--<div style="grid-column-start: 2; grid-column-end: 2;" class="columnsGrid" >
                         <div class="miniatura-atractivo">
                             <h3 class="text-center" style="height: 100px;"> Volcán Póas</h3>
                             <img style="margin-bottom: 30px" type="button" src="public/css/img/volvanPoas2.jpg" width="100%" height="100%" data-toggle="modal" data-target=".bd-example-modal-2g">
@@ -224,9 +234,9 @@ require_once 'public/header.php';
                             </div>
                         </div>
                     </div>
-
+                -->
                 <!--modal 3 -->
-                <div style="grid-column-start: 3; grid-column-end: 3;" class="columnsGrid">
+                <!--<div style="grid-column-start: 3; grid-column-end: 3;" class="columnsGrid">
                         <div class="miniatura-atractivo">
                             <h3 class="text-center" style="height: 100px;">Parque Nacional Marino Ballena</h3>
                             <img style="margin-bottom: 30px" type="button" src="public/css/img/marinoBallena2.jpg" width="100%" height="100%" data-toggle="modal" data-target=".bd-example-modal-3g">
@@ -287,9 +297,9 @@ require_once 'public/header.php';
                             </div>
                         </div>
                     </div>
-
+                -->
                 <!--modal 4-->
-                <div style="grid-column-start: 1; grid-column-end: 1;" class="columnsGrid">
+                <!--<div style="grid-column-start: 1; grid-column-end: 1;" class="columnsGrid">
                     <div class="miniatura-atractivo">
                         <h3 class="text-center" style="height: 100px;">Canopy</h3>
                         <img style="margin-bottom: 30px" type="button" src="public/css/img/canopy.jpg" width="100%" height="100%" data-toggle="modal" data-target=".bd-example-modal-4g">
@@ -349,9 +359,9 @@ require_once 'public/header.php';
                         </div>
                     </div>
                 </div>
-
+                -->
                 <!--modal 5 -->
-                <div style="grid-column-start: 2; grid-column-end: 2;" class="columnsGrid" >
+                <!--<div style="grid-column-start: 2; grid-column-end: 2;" class="columnsGrid" >
                     <div class="miniatura-atractivo">
                         <h3 class="text-center" style="height: 100px;">Surfing</h3>
                         <img style="margin-bottom: 30px" type="button" src="public/css/img/surfear.jpg" width="100%" height="100%" data-toggle="modal" data-target=".bd-example-modal-5g">
@@ -413,6 +423,7 @@ require_once 'public/header.php';
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </div>
     </div>

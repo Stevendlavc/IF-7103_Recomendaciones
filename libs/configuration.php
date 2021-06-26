@@ -7,8 +7,14 @@ $config->set('controllerFolder', 'controller/');
 $config->set('modelFolder', 'model/');
 $config->set('viewFolder', 'view/');
 
-$config->set('dbhost', 'localhost');
+/*$config->set('dbhost', 'localhost');
 $config->set('dbname', '');
 $config->set('dbuser', 'root');
 $config->set('dbpass', 'root');
+*/
+$config->set('dbhost', "163.178.107.10:3306");
+$config->set('dbname', 'proyectoexpertos');
+$config->set('dbuser', 'laboratorios');
+$config->set('dbpass', "KmZpo.2796");
+
 ?>

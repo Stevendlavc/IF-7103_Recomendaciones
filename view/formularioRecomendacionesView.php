@@ -19,21 +19,21 @@ require_once 'public/header.php';
         </div>
 
         <div class="contenedorFormulario">
-                <form class="contact-form row" method="post" action="?controlador=recomendaciones&accion=accionRecomendaciones">
+                <form class="contact-form row" method="post" action="?controlador=recomendaciones&accion=buscarRecomendaciones">
                     <div class="form-field col-sm-6">
-                        <input type="radio" value="none" id="actividad" name="tipo" onclick="activarActividad()" checked/>
+                        <input type="radio" value="1" id="tipo" name="tipo" onclick="activarActividad()" checked/>
                         <label for="actividad" class="label">Actividad</label>
                     </div>
                     <div class="form-field col-sm-6">
-                        <input type="radio" value="none" id="atractivo" name="tipo" onclick="activarAtractivo()"/>
+                        <input type="radio" value="2" id="tipo" name="tipo" onclick="activarAtractivo()" />
                         <label for="atractivo" class="label">Atractivo</label>
                     </div>
 
                     <div class="form-field col-lg-12 ">
                         <select class="form-select input-text js-input" name="precio" id="precio">
-                            <option value="1" selected>Bajo</option>
-                            <option value="2">Medio</option>
-                            <option value="3">Alto</option>
+                            <option value="1" selected>Menor o igual a 10.000</option>
+                            <option value="2">Mayor a 10.000 y menor o igual a 50.000</option>
+                            <option value="3">Mayor a 50.000</option>
                         </select>
                         <label class="label" for="precio">Precio</label>
                     </div>
@@ -50,19 +50,19 @@ require_once 'public/header.php';
 
                     <div class="form-field col-lg-12 " id="divActividad" name="divActividad">
                         <select class="form-select input-text js-input" name="tipoActividad" id="tipoActividad">
-                            <option value="1" selected>Senderos</option>
-                            <option value="2">Surf</option>
-                            <option value="3">Canopy</option>
+                            <option value="6" selected>En la montaña</option>
+                            <option value="7">En el mar</option>
                         </select>
-                        <label class="label" for="tipoActividad">Tipo Actividad</label>
+                        <label class="label" for="tipoActividad">Lugar de Actividad</label>
                     </div>
 
                     <div class="form-field col-lg-12 " id="divAtractivo" name="divAtractivo" hidden>
                         <select class="form-select input-text js-input" name="tipoActractivo" id="tipoAtractivo">
-                            <option value="1" selected>Playa</option>
-                            <option value="2">Montaña</option>
-                            <option value="3">Ciudad</option>
-                            <option value="4">Parques Nacionales</option>
+                            <option value="1" selected>Parques Nacionales</option>
+                            <option value="2">Volcán</option>
+                            <option value="3">Museo</option>
+                            <option value="4">Reserva</option>
+                            <option value="5">Playa</option>
                         </select>
                         <label class="label" for="tipoAtractivo">Tipo Atractivo</label>
                     </div>
