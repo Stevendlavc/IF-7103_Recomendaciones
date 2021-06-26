@@ -8,7 +8,13 @@ class actividadesController{
     }//constructor
 
     public function accionActividades(){
-        $this->view->show("actividadesView.php");
+        require 'model/recomendacionesModel.php';
+        $recomedaciones = new recomendacionesModel();
+        $datos = Array();
+        $datos['msj'] = $recomedaciones->obtenerInformacion("Actividades");
+        $datos['datos'] =  $recomedaciones->obtenerActividades();
+
+        $this->view->show("actividadesView.php", $datos);
     }//accionActividades
 }// fin de clase
 ?>
