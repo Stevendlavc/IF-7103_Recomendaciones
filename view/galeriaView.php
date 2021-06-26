@@ -1,91 +1,102 @@
 <?php
 require_once 'public/header.php';
 ?>
+<style type="text/css">
+    
+div.gallery {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-left: 20px;
+
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<script type="text/javascript" src="public/js/galeria.js"></script> 
+
 <div class="contenedorBody">
     <div class="jumbotron">
       <div class="container">
-        <h1>Galeria</h1>
-        <p>Muestra imagenes y la descripción de los atractivos y actividades.</p>
+        <h1 id="titulo"></h1>
+        <p id="descripción"></p>
         </div>
     </div>
-
-
+<div class="containerRow" >
     <div class="containerRow">
-        <div class="containerRow">
         <h3 class="text-center">Atractivos</h3>
-        <div class="row rowGaleria">
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre del atractivo</h4>
-                <img src="public/css/img/manuelAntonio.jpg" onclick="onClick(this)" class="myImg" id="myImg" alt="Responsive image">
-                <p class="textGaleria">Descripción del atractivo</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre del atractivo</h4>
-                <img src="public/css/img/chirripo.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image">
-                <p class="textGaleria">Descripción del atractivo</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre del atractivo</h4>
-                <img src="public/css/img/tortuga.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image">
-                <p class="textGaleria">Descripción del atractivo</p>
-            </div>
+        <div class="row rowGaleria" style="width: 100%">
+            <?php foreach($vars2['datos2'] as $key => $value2){?>
+            </br>
+            <div class="responsive">
+                <div class="gallery">                                                               
+                    <h4 class="tituloMapa" style="text-align: center;"><?php echo $value2['nombre']?></h4>
+                        <img src="public/img/<?php echo $value2['imagen1']?>" alt="<?php echo $value2['nombre']?>" onclick="onClick(this)" width="600" height="500">
+                    <div class="desc" style="text-align: justify"><?php echo $value2['descripcion']?></div>                    
+                </div> 
+            </div> 
+            <?php
+            }
+            ?>
         </div>
-        <div class="row rowGaleria">
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre del atractivo</h4>
-                <img src="public/css/img/volcanArenal.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image">
-                <p class="textGaleria">Descripción del atractivo</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre del atractivo</h4>
-                <img src="public/css/img/volcanIrazu.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image" >
-                <p class="textGaleria">Descripción del atractivo</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre del atractivo</h4>
-                <img src="public/css/img/manuelAntonio.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image" >
-                <p class="textGaleria">Descripción del atractivo</p>
-            </div>
-        </div>
+    </div>
+    <div class="containerRow">
         <h3 class="text-center">Actividades</h3>
-        <div class="row rowGaleria">
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre de la actividad</h4>
-                <img src="public/css/img/caminata.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image" >
-                <p class="textGaleria">Descripción de la actividad</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre de la actividad</h4>
-                <img src="public/css/img/canopy.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image" >
-                <p class="textGaleria">Descripción de la actividad</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre de la actividad</h4>
-                <img src="public/css/img/surfear.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image">
-                <p class="textGaleria">Descripción de la actividad</p>
-            </div>
-        </div>
-        <div class="row rowGaleria">
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre de la actividad</h4>
-                <img src="public/css/img/surfear.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image">
-                <p class="textGaleria">Descripción de la actividad</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre de la actividad</h4>
-                <img src="public/css/img/caminata.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image">
-                <p class="textGaleria">Descripción de la actividad</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <h4 class="tituloMapa" href="index.php">Nombre de la actividad</h4>
-                <img src="public/css/img/canopy.jpg" id="myImg" class="myImg" onclick="onClick(this)" alt="Responsive image">
-                <p class="textGaleria">Descripción de la actividad</p>
-            </div>
+        <div class="row rowGaleria" style="width: 100%">
+            <?php foreach($vars['datos'] as $key => $value){?>
+            </br>
+            <div class="responsive">
+                <div class="gallery">                                                               
+                    <h4 class="tituloMapa" style="text-align: center;" href="index.php"><?php echo $value['nombre']?></h4>
+                        <img src="public/img/<?php echo $value['imagen1']?>" alt="<?php echo $value['nombre']?>" onclick="onClick(this)" width="600" height="400">
+                    <div class="desc"><?php echo $value['descripcion']?></div>                    
+                </div> 
+            </div> 
+            <?php
+            }
+            ?>
         </div>
     </div>
-    </div>
-
-
     <div id="modal01" class="modal-galeria" onclick="this.style.display='none'">
       <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
       <div class="modal-img">

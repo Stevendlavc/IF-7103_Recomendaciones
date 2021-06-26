@@ -8,7 +8,12 @@
         }//constructor
         
         public function accionMapa(){
-            $this->view->show("mapaView.php");
+        	require 'model/infoModel.php';
+            $items= new infoModel();
+            $datos['datos']=$items->textos();
+            $this->view->show("mapaView.php",$datos);
         }//accionMapa
+
+
     }// fin de clase
 ?>

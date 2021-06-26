@@ -5,7 +5,7 @@ class View {
         ;
     }//constructor
     
-    public function show($nombreVista, $vars=array()){
+    public function show($nombreVista, $vars=array(),$vars2=[]){
         $config = Config::singleton();
         $path = $config->get('viewFolder').$nombreVista;
         if(is_file($path) == FALSE){
@@ -15,6 +15,11 @@ class View {
         if(is_array($vars)){
             foreach ($vars as $key=>$value){//for que convierte el array a un key->value(diccionario)
                 $key = $value;
+            }//foreach
+        }//if (is_array($vars))
+        if(is_array($vars2)){
+            foreach ($vars2 as $key=>$value2){//for que convierte el array a un key->value(diccionario)
+                $key = $value2;
             }//foreach
         }//if (is_array($vars))
         include $path;

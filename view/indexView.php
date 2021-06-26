@@ -2,6 +2,8 @@
 require_once 'public/header.php';
 ?>
 
+<script type="text/javascript" src="public/js/inicio.js"></script> 
+
 <div class="contenedorBody">
     <div class="jumbotron">
       <div class="container text-center">
@@ -11,8 +13,9 @@ require_once 'public/header.php';
         </div>
     </div>
     <div class="containerRow container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+        <div class="row">      
+
+          <div class="col-12 col-sm-12 col-md-12 col-lg-4">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -20,27 +23,27 @@ require_once 'public/header.php';
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    </ol>
+                    </ol>                    
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="img-crsl" src="public/css/img/manuelAntonio.jpg" alt="Los Angeles">
-                            <div class="textCarrousel">Parque Nacional Manuel Antonio</div>
+                            <img class="img-crsl" src="public/img/<?php echo $vars['datos'][0]['imagen1']?>">
+                            <div class="textCarrousel" id="text1"><?php echo $vars['datos'][0]['nombre']?></div>
                         </div>
                         <div class="carousel-item">
-                            <img class="img-crsl" src="public/css/img/canopy.jpg" alt="Chicago">
-                            <div class="textCarrousel">Canopy</div>
+                            <img class="img-crsl" src="public/img/<?php echo $vars['datos'][1]['imagen1']?>" >
+                            <div class="textCarrousel "id="text2"><?php echo $vars['datos'][1]['nombre']?></div>
                         </div>
                         <div class="carousel-item">
-                            <img class="img-crsl" src="public/css/img/chirripo.jpg" alt="Chicago">
-                            <div class="textCarrousel">Cerro Chirripo</div>
+                            <img class="img-crsl" src="public/img/<?php echo $vars['datos'][2]['imagen1']?>" >
+                            <div class="textCarrousel" id="text3"><?php echo $vars['datos'][2]['nombre']?></div>
                         </div>
                         <div class="carousel-item">
-                            <img class="img-crsl" src="public/css/img/volcanIrazu.jpg" alt="New York">
-                            <div class="textCarrousel">Volcán Irazú</div>
+                            <img class="img-crsl" src="public/img/<?php echo $vars['datos'][3]['imagen1']?>">
+                            <div class="textCarrousel" id="text4"><?php echo $vars['datos'][3]['nombre']?></div>
                         </div>
                         <div class="carousel-item">
-                            <img class="img-crsl" src="public/css/img/caminata.jpg"  alt="New York">
-                            <div class="textCarrousel">Caminatas</div>
+                            <img class="img-crsl" src="public/img/<?php echo $vars['datos'][4]['imagen1']?>">
+                            <div class="textCarrousel" id="text5"><?php echo $vars['datos'][4]['nombre']?></div>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -54,8 +57,7 @@ require_once 'public/header.php';
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-                <p style="margin-top: 45px;" class="text-center">Los visitantes disfrutarán de hermosas playas tropicales, emocionantes aventuras, maravillas de la naturaleza y una interesante cultura, todos los componentes necesarios para unas vacaciones ideales.</p>
-                <p style="margin-top: 40px;" class="text-center">Aquí te daremos algunas recomendaciones de actividades o atractivos turísticos que puedes visitar de acuerdo a tus criterios de búsqueda. Solo dale en el siguiente botón y completa los datos.</p>
+                <p style="margin-top: 45px;" class="text-center" id="texto"></p>
                 <div class="text-center">
                     <a style="margin-top: 5px;" href="?controlador=recomendaciones&accion=accionRecomendaciones">
                         <input class="submit-btn btn-inicio" type="button" value="Recomendaciones">
