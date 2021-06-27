@@ -72,7 +72,6 @@ div.desc {
                 <div class="gallery">                                                               
                     <h4 class="tituloMapa" style="text-align: center;"><?php echo $value2['nombre']?></h4>
                         <img src="public/img/<?php echo $value2['imagen1']?>" alt="<?php echo $value2['nombre']?>" onclick="onClick(this)" width="600" height="500">
-                    <div class="desc" style="text-align: justify"><?php echo $value2['descripcion']?></div>                    
                 </div> 
             </div> 
             <?php
@@ -89,7 +88,6 @@ div.desc {
                 <div class="gallery">                                                               
                     <h4 class="tituloMapa" style="text-align: center;" href="index.php"><?php echo $value['nombre']?></h4>
                         <img src="public/img/<?php echo $value['imagen1']?>" alt="<?php echo $value['nombre']?>" onclick="onClick(this)" width="600" height="400">
-                    <div class="desc"><?php echo $value['descripcion']?></div>                    
                 </div> 
             </div> 
             <?php

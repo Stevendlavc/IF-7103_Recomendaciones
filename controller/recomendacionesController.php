@@ -23,6 +23,8 @@
                 $datos['msj'] = $recomedaciones->obtenerInformacion("Recomendaciones");
                 $datos['datos'] = $this->accionRecomendacionesActividades($recomedaciones);
             }else{
+                $datos['msj'] = $recomedaciones->obtenerInformacion("Recomendaciones");
+                $datos['datos'] = $this->accionRecomendacionesAtractivos($recomedaciones);
             }
 
             $this->view->show("recomendacionesView.php", $datos);
@@ -197,5 +199,185 @@
             echo json_encode($datos);
         }
 
+        public function accionRecomendacionesAtractivos($algoritmos){
+            $precio = $_POST['precio'];
+            $turista = $_POST['turista'];
+            $provincia = $_POST['provincia'];
+            $tipoLugar = $_POST['tipoActractivo'];
+            //precio
+            if ($precio==="1"){
+                $precio=10000;
+            }else if ($precio==="2"){
+                $precio=50000;
+            }else{
+                $precio=50001;
+            }
+
+            //turista
+            if ($turista === "1") {
+                $turista = "Explorador";
+            }else if ($turista === "2") {
+                $turista = "Extremo";
+            }else if ($turista === "3") {
+                $turista = "Tranquilo";
+            }else{
+                $turista="Aventurero";
+            } 
+
+            //provincia
+            if ($provincia === "1") {
+                $provincia = "San José";
+            } elseif ($provincia === "2") {
+                $provincia = "Alajuela";
+            } elseif ($provincia === "3") {
+                $provincia = "Cartago";
+            } elseif ($provincia === "4") {
+                $provincia = "Heredia";
+            } elseif ($provincia === "5") {
+                $provincia = "Guanacaste";
+            } elseif ($provincia === "6") {
+                $provincia = "Puntarenas";
+            } else {
+                $provincia = "Limón";
+            }
+
+            if($tipoLugar==="1"){
+                $tipoLugar="Parque";
+            }else if($tipoLugar==="2"){
+                $tipoLugar="Volcán";
+            }else if($tipoLugar==="3"){
+                $tipoLugar="Museo";
+            }else if($tipoLugar==="4"){
+                $tipoLugar="Reserva";
+            }else{
+                $tipoLugar="Playa";
+            }
+
+            $precio1=0;
+            $precio2=0;
+            $precio3=0;
+
+            $turista1=0;
+            $turista2=0;
+            $turista3=0;
+
+            $atractivo1=0;
+            $atractivo2=0;
+            $atractivo3=0;
+
+            $provincia1=0;
+            $provincia2=0;
+            $provincia3=0;
+
+            //llama al metodo obtenerDeterminarRed() para obtener los datos alamcenados
+            $datos = $algoritmos->probabilidades();
+            $datos2=$algoritmos->probabilidadesClase();            
+
+                //Se recorren los datos almacenados en la base de datos y deacuerdo a sus valores se cambian por numeros
+                //Asi se podran usar en el algoritmo que calcula la distancia
+                for ($i = 0; $i < sizeof($datos); $i++) {
+                    if ($datos[$i]['atributo']==="precio" && $datos[$i]['valor']==$precio){
+                        if ($datos[$i]['clase']==="1"){
+                            $precio1=$datos[$i]['probabilidad'];
+
+                        }else if ($datos[$i]['clase']==="2"){
+                            $precio2=$datos[$i]['probabilidad'];
+
+                        }else if ($datos[$i]['clase']==="3"){
+                            $precio3=$datos[$i]['probabilidad'];                        
+                        }               
+                    }     
+                    if ($datos[$i]['atributo']==="tipoturista" && $datos[$i]['valor']==$turista){
+                        if ($datos[$i]['clase']==="1"){
+                            $turista1=$datos[$i]['probabilidad'];
+
+                        }else if ($datos[$i]['clase']==="2"){
+                            $turista2=$datos[$i]['probabilidad'];
+
+                        }else if ($datos[$i]['clase']==="3"){
+                            $turista3=$datos[$i]['probabilidad'];                        
+                        }               
+                    }  
+                    if ($datos[$i]['atributo']==="tipolugar" && $datos[$i]['valor']==$tipoLugar){
+                        if ($datos[$i]['clase']==="1"){
+                            $atractivo1=$datos[$i]['probabilidad'];
+
+                        }else if ($datos[$i]['clase']==="2"){
+                            $atractivo2=$datos[$i]['probabilidad'];
+
+                        }else if ($datos[$i]['clase']==="3"){
+                            $atractivo3=$datos[$i]['probabilidad'];                        
+                        }               
+                    }    
+                    if ($datos[$i]['atributo']==="provincia" && $datos[$i]['valor']==$provincia){
+                        if ($datos[$i]['clase']==="1"){
+                            $provincia1=$datos[$i]['probabilidad'];
+
+                        }else if ($datos[$i]['clase']==="2"){
+                            $provincia2=$datos[$i]['probabilidad'];
+
+                        }else if ($datos[$i]['clase']==="3"){
+                            $provincia3=$datos[$i]['probabilidad'];                        
+                        }               
+                    }                     
+                    
+                }
+        /*Se realizan las multiplicacion de las probabilidades de cada atributo para cada clase*/
+                $clase1=$precio1*$turista1*$atractivo1*$provincia1;
+                $clase2=$precio2*$turista2*$atractivo2*$provincia2;
+                $clase3=$precio3*$turista3*$atractivo3*$provincia3;
+
+                /*Se recorre el array donde se tiene guardado las probabilidades de cada clase y se realiza la multiplicacion
+                para sacar la probabilidad total de cada clase y se guarda en una variable*/
+                for ($i = 0; $i < sizeof($datos2); $i++) {
+                    if ($datos2[$i]['clase']==="1"){
+                        $clase1=$clase1*$datos2[$i]['probabilidad'];
+                    }else if ($datos2[$i]['clase']==="2"){
+                        $clase2=$clase2*$datos2[$i]['probabilidad'];
+                    }else {
+                        $clase3=$clase3*$datos2[$i]['probabilidad'];
+                    }
+                }
+
+                /*Se evalua cual es la probabilidad total mayor*/
+                if($clase1>$clase2 && $clase1>$clase3){
+                    $atractivos = $algoritmos->atractivos(1);
+                }else if($clase2>$clase1 && $clase2>$clase3){
+                    $atractivos = $algoritmos->atractivos(2);
+                }else if($clase3>$clase1 && $clase3>$clase2){
+                    $atractivos = $algoritmos->atractivos(3);
+                }
+                return $atractivos;            
+        }
+
+        public function itemsFrecuencias(){
+            require 'model/recomendacionesModel.php';
+            $items = new recomendacionesModel();
+            $frecuencias=$items->frecuencias();
+            header('Content-Type: application/json');
+            echo json_encode($frecuencias);//convierte el objeto en json
+        }//fin itemsFrecuencias
+
+
+        /*En esta funcion se registran las probabilidades que se generaron y se envian a registrarProbabilidades para guardarlo en la base de datos*/
+        public function registrarProbabilidades() {
+            require 'model/recomendacionesModel.php';
+            $items = new recomendacionesModel();      
+            $probabilidad=array();
+            $arrayProbabilidades=array();
+            $data = json_decode($_POST['array']);                
+            $longitud = count($data); 
+            for($i=0; $i<$longitud; $i++){ 
+                $probabilidad = 
+                ["atributo" => $data[$i]->atributo, 
+                "valor" => $data[$i]->valor, 
+                "clase"=> $data[$i]->clase, 
+                "probabilidad"=> $data[$i]->probabilidad,                       
+                ];
+                array_push($arrayProbabilidades, $probabilidad);  
+            }
+            $items->registrarProbabilidades($arrayProbabilidades);
+        }
+        
     }// fin de clase
 ?>

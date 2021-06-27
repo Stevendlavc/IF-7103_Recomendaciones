@@ -59,7 +59,7 @@ require_once 'public/header.php';
             <div class="col-12 col-sm-12 col-md-12 col-lg-8">
                 <p style="margin-top: 45px;" class="text-center" id="texto"></p>
                 <div class="text-center">
-                    <a style="margin-top: 5px;" href="?controlador=recomendaciones&accion=accionRecomendaciones">
+                    <a style="margin-top: 5px;" href="?controlador=recomendaciones&accion=accionFormularioRecomendaciones">
                         <input class="submit-btn btn-inicio" type="button" value="Recomendaciones">
                     </a>
                 </div>
