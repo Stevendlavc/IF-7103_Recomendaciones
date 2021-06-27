@@ -1,17 +1,23 @@
+var promos = [];
 // Setup the calendar with the current date
 $(document).ready(function(){
-    var date = new Date();
-    var today = date.getDate();
-    // Set click handlers for DOM elements
-    $(".right-button").click({date: date}, next_year);
-    $(".left-button").click({date: date}, prev_year);
-    $(".month").click({date: date}, month_click);
-    // Set current month as active
-    $(".months-row").children().eq(date.getMonth()).addClass("active-month");
-    init_calendar(date);
-    //getMonth()+1 porque el arreglo resultante inicia en 0
-    var events = check_events(today, date.getMonth()+1, date.getFullYear());
-    show_events(events, months[date.getMonth()], today);
+    obtenerPromos();
+    setTimeout(function()
+    {
+        var date = new Date();
+        var today = date.getDate();
+        // Set click handlers for DOM elements
+        $(".right-button").click({date: date}, next_year);
+        $(".left-button").click({date: date}, prev_year);
+        $(".month").click({date: date}, month_click);
+        // Set current month as active
+        $(".months-row").children().eq(date.getMonth()).addClass("active-month");
+        init_calendar(date);
+        //getMonth()+1 porque el arreglo resultante inicia en 0
+        var events = check_events(today, date.getMonth()+1, date.getFullYear());
+        show_events(events, months[date.getMonth()], today);
+    }, 2000); //Se utiliza timeout debido a que la función que trae las promociones es asincrónica, por lo que dejar una ejecución
+                      //normal generaría conflictos al inicializar el calendario.
 });
 
 // Initialize the calendar by appending the HTML dates
@@ -192,11 +198,11 @@ function show_events(events, month, day) {
 // Checks if a specific date has any events
 function check_events(day, month, year) {
     var events = [];
-    for(var i=0; i<event_data["events"].length; i++) {
-        var event = event_data["events"][i];
-        if(event["day"]===day &&
-            event["month"]===month &&
-            event["year"]===year) {
+    for(var i=0; i<promos.length; i++) {
+        var event = promos[i];
+        if(parseInt(event["day"])===day &&
+            parseInt(event["month"])===month &&
+            parseInt(event["year"])===year) {
             events.push(event);
         }
     }
@@ -206,49 +212,25 @@ function check_events(day, month, year) {
 function onClick(element) {
     document.getElementById("img01").src = element.src;
     document.getElementById("modal01").style.display = "block";
-  }
+}
 
-// Given data for events in JSON format
-var event_data = {
-    "events": [
+function obtenerPromos(){
+    $.ajax(
         {
-            "occasion": " Concierto en vivo en el restaurante XYZ: 9pm ",
-            "year": 2021,
-            "month": 5,
-            "day": 23
-        },
-        {
-            "occasion": " Caminata guiada al Cerro Chirripó: 8am ",
-            "year": 2021,
-            "month": 5,
-            "day": 23
-        },
-        {
-            "occasion": " Caminata guiada al Cerro Chirripó: 10am ",
-            "year": 2021,
-            "month": 5,
-            "day": 24
-        },
-        {
-            "occasion": " Descuento del 50% en almuerzos en Restaurante XYZ ",
-            "year": 2021,
-            "month": 5,
-            "day": 24
-        },
-        {
-            "occasion": " Piscina abierta en Hotel ABC durante el dia completo ",
-            "year": 2021,
-            "month": 5,
-            "day": 24
-        },
-        {
-            "occasion": " Tour guiado. Parque Manuel Antonio: A partir de las 8:30am ",
-            "year": 2021,
-            "month": 5,
-            "day": 29
+            data: '',
+            url: '?controlador=promociones&accion=obtenerPromociones',
+            type: 'post',
+            dataType: 'json',
+            beforeSend: function () {
+            },
+            success: function (response) {
+                for(var i=0; i<response["events"].length; i++) {
+                    promos.push(response["events"][i]);
+                }
+            }
         }
-    ]
-};
+    );
+}
 
 const months = [
     "Enero",

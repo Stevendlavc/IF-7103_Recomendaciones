@@ -10,7 +10,15 @@ class tipsController
     }//constructor
 
     public function tips(){
-        $this->view->show("tipsView.php");
+        require 'model/tipsModel.php';
+
+        //Se instancia el modelo donde se encuentran las funciones que accesan a base de datos
+        $model = new tipsModel();
+
+        //Se extraen los registros de la base de datos
+        $datosBD = $model->obtenerTips();
+
+        $this->view->show("tipsView.php", $datosBD);
     }//vistaTips
 
 }
