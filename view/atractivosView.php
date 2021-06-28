@@ -25,7 +25,7 @@ require_once 'public/header.php';
             <?php $i= 1; $idtipo="id"; $idDiv="div"; $contador = 1;  foreach ($vars['datos'][1]as $dato){ ?>
             <div id="<?php echo $idDiv.$contador?>" name= "<?php echo $idDiv.$contador?>" style="grid-column-start: <?php echo $i?>; grid-column-end: <?php echo $i?>;" class="columnsGrid">
                 <div class="miniatura-atractivo">
-                    <h3 class="text-center" style="height: 100px; margin-top: 50px"><?php echo $dato[4]?></h3>
+                    <h3 class="text-center" style="font-size: 2.8em; margin-top: 50px"><?php echo $dato[4]?></h3>
                     <div class="img-atractivo">
                         <img style="margin-bottom: 30px" type="button" src="public/img/<?php echo $dato[5]?>" width="100%" height="100%" data-toggle="modal" onclick="cargarModal(<?php echo $dato[6]?>)" data-target=".bd-example-modal-lg">
                     </div>
@@ -48,11 +48,11 @@ require_once 'public/header.php';
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content" style="color: white">
                         <div class="form-field">
-                            <h2 id="titulo" style="text-align: center; font-size: 4em"></h2>
+                            <h2 id="titulo" style="text-align: center; font-size: 1.8em"></h2>
                         </div>
 
                         <div class="form-field">
-                            <p style="font-size: 1.5em;">
+                            <p style="font-size: 1em; text-align: justify;">
                     <span id="descripcion">
                         <!-- descripciondentro del span -->
                     </span>
@@ -60,7 +60,7 @@ require_once 'public/header.php';
                         </div>
 
                         <div class="form-field" style="margin-top: 10px">
-                            <p style="font-size: 1.7em;">
+                            <p style="font-size: 1em;">
                     <span>
                         Precio:
                     </span>
