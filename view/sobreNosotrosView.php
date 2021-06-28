@@ -20,7 +20,7 @@ require_once 'public/header.php';
                 <div class="col-sm-4 text-center">
                     <img src="./public/img/<?php echo $vars['datos'][3]?>" class="img-sobreNosotros"  width="100%" height="100%">
                  </div>
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-4" style="text-align: justify;">
                     <p><?php echo $vars['datos'][4]?></p>
                 </div>
                 <div class="col-sm-4 text-center">
